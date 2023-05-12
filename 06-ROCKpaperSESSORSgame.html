@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RPS-GAME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <style>
+     body {
+      text-align: center;
+      background-image: url("pic2.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    p{
+
+      font-size: 50px;
+      margin-left: 400px;
+      font-family: 'Bangers', cursive;
+      font-family: 'Shadows Into Light', cursive;
+      padding-left: px;
+
+      margin: 0 auto;
+      width: fit-content;
+      color: rgb(81, 223, 16);
+
+    }
+
+    button{
+      font-size: 20px;
+      height: 40px;
+      width: 1000px;
+      margin-bottom: 15px;
+      font-family: 'Anton', sans-serif;
+      cursor: pointer;
+      transition: background-color 0.8s,opacity 0.8s;
+    }
+    button:hover{
+      opacity: 0.8;
+      
+
+    }
+    .buttn-box{
+      margin: 0 auto;
+      margin-top: 100px;
+      width: fit-content;
+
+    }
+
+    .rock:hover{
+      background-color: rgba(184, 25, 25, 0.986);
+      
+
+
+    }
+    .paper:hover{
+      background-color: rgb(10, 202, 10);
+    }
+    .scissors:hover{
+
+      background-color: rgb(31, 81, 219);
+
+    }
+
+
+  </style>
+
+
+
+
+
+
+
+</head>
+<body>
+  
+  <p>
+    Rock Paper Scissors
+  </p>
+
+  <div class="buttn-box">
+    <button class="rock" onclick="
+      const pc = Math.random();
+      console.log(pc);
+      if (pc>=0 && pc <=1/3 ){
+        pcChoise = 'Rock';
+        
+      }else if (pc >=1/3 && pc <=2/3){
+        pcChoise='paper';
+        
+      }else if (pc >=2/3 && pc <= 1 ){
+        pcChoise='scissors';
+        
+      }console.log(pcChoise);
+      if (pcChoise==='Rock'){
+        
+        roundResult='Tie';
+        
+     
+      }else if (pcChoise==='paper'){
+        roundResult='You lose.';
+        points--;
+      }else if (pcChoise==='scissors'){
+        roundResult='You win.';
+        points++;
+      }
+      alert(`You picked Rock. Computer picked ${pcChoise}.${roundResult} `);
+      ">
+      Rock
+    </button>
+
+    <button class="paper" onclick="
+     pc = Math.random();
+    console.log(pc);
+    if (pc>=0 && pc <=1/3 ){
+      pcChoise = 'Rock';
+      
+    }else if (pc >=1/3 && pc <=2/3){
+      pcChoise='Paper';
+      
+    }else if (pc >=2/3 && pc <= 1 ){
+      pcChoise='scissors';
+      
+    }console.log(pcChoise);
+    if (pcChoise==='Rock'){
+      
+      roundResult='You win.';
+      points++;
+   
+    }else if (pcChoise==='paper'){
+      roundResult='Tie.';
+    }else if (pcChoise==='scissors'){
+      roundResult='You lose.';
+      points--;
+    }
+    alert(`You picked Paper. Computer picked ${pcChoise}.${roundResult} `);
+    ">
+      Paper
+    </button>
+
+    <button class="scissors" onclick="
+     pc = Math.random();
+    console.log(pc);
+    if (pc>=0 && pc <=1/3 ){
+      pcChoise = 'Rock';
+      
+    }else if (pc >=1/3 && pc <=2/3){
+      pcChoise='Paper';
+      
+    }else if (pc >=2/3 && pc <= 1 ){
+      pcChoise='scissors';
+      
+    }console.log(pcChoise);
+    if (pcChoise==='Rock'){
+      
+      roundResult='You lose.';
+      points--;
+      
+   
+    }else if (pcChoise==='paper'){
+      roundResult='You win.';
+      points++;
+    }else if (pcChoise==='scissors'){
+      roundResult='Tie.';
+    }
+    alert(`You picked Scissors. Computer picked ${pcChoise}.${roundResult} `);
+    ">
+      Scissors
+    </button>
+
+
+  </div>
+
+  
+
+
+
+
+
+
+
+
+  <script>
+    let pcChoise = '';
+    let roundResult= '';
+    let points = 0;
+
+
+  </script>
+
+
+</body>
+</html>
